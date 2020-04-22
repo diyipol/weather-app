@@ -11,10 +11,12 @@ import {
 } from "../../../constants/weather";
 import "./styles.css";
 
-const WeatherData = () => (
-  <div>
-    <WeatherTemperature temperature={20} weatherState={SUN} />
-    <WeatherExtraInfo humidity={80} wind={"10m/s"} />
+const WeatherData = ({
+  data: { temperature, weatherState, humidity, wind },
+}) => (
+  <div className="weatherDataCont">
+    <WeatherTemperature temperature={temperature} weatherState={weatherState} />
+    <WeatherExtraInfo humidity={humidity} wind={wind} />
   </div>
 );
 
