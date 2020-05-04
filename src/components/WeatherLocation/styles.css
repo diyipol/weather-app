@@ -4,6 +4,9 @@
   text-align: left;
   color: #888;
   line-height: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .locationCont h1 {
