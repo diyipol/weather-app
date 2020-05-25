@@ -7,6 +7,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import ForecastExtended from "./components/ForecastExtended";
+import { createStore } from "redux";
+
+const store = createStore(() => {},
+window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const cities = [
   "Santa Cruz de la Palma,es",
@@ -28,6 +32,10 @@ class App extends Component {
 
   handleSelectedLocation = (city) => {
     this.setState({ city });
+
+    const action = { type: "setCity", value: city };
+
+    store.dispatch(action);
   };
 
   render() {
