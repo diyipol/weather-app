@@ -20,12 +20,7 @@ class WeatherLocation extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
     this.loadWeatherData();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("componentDidUpdate");
   }
 
   loadWeatherData = () => {
